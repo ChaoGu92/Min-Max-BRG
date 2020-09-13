@@ -10,4 +10,4 @@ This program requires Matlab R2017a or higher version.
 
 We implement the key idea of the paper in MinimaxBRG.m (for computing the minimax-BRGs), MinimaxMbasis.m (for comptuting the minimax basis markings), and minimaxy.m (for computing the minimal and maximal explanations).
 
-To test the efficiency of the minimax-BRG on specific Petri net benchmarks, one can call the function # test.m
+To test the efficiency of the minimax-BRG on specific Petri net benchmarks, one can call the function test.m
