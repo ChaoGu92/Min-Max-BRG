@@ -11,3 +11,9 @@ This program requires Matlab R2017a or higher version.
 We implement the key idea of the paper in MinimaxBRG.m (for computing the minimax-BRGs), MinimaxMbasis.m (for comptuting the minimax basis markings), and minimaxy.m (for computing the minimal and maximal explanations).
 
 To test the efficiency of the minimax-BRG on specific Petri net benchmarks, one can call the function Test.m
+
+# Input of the program:
+
+● the Petri net system (N, M0, MF) by its Pre matrix, Post matrix, the initial marking M0, the GMEC parameters w and k (characterizing the set of final markings MF)
+
+● the set of explicit transitions Te1
