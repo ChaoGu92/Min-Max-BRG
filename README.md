@@ -30,10 +30,11 @@ We implement the key idea of the paper in MinimaxBRG.m (for computing the minima
 
 ```MATLAB
 %Pre matrix
-Pre = [   %t1,t2,t3%
-     /p1/  1, 0, 0;
-     /p2/  0, 1, 2;
-     /p3/  0, 0, 1;
+         
+Pre = [  %t1,t2,t3%
+           1, 0, 0; %p1
+           0, 1, 2; %p2
+           0, 0, 1; %p3
 ];
 
 %Post matrix
@@ -70,10 +71,10 @@ Te1 = [2];
 
 ```MATLAB
 %Pre matrix
-Pre = [   %t1,t2,t3%
-     %p1%  1, 0, 0;
-     %p2%  0, 1, 2;
-     %p3%  0, 0, 1;
+Pre = [  %t1,t2,t3%
+           1, 0, 0; %p1
+           0, 1, 2; %p2
+           0, 0, 1; %p3
 ];
 
 %Post matrix
