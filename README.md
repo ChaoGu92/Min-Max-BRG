@@ -10,9 +10,9 @@ This program requires Matlab R2017a or higher version.
 
 We implement the key idea of the paper in MinimaxBRG.m (for computing the minimax-BRGs), MinimaxMbasis.m (for comptuting the minimax basis markings), and minimaxy.m (for computing the minimal and maximal explanations).
 
-* To test and compare the computational efficiency among RG, expanded BRG, and minimax-BRG on specific Petri net benchmarks, one can call the function Test.m
+* To test and compare the computational efficiency among RG, expanded BRG, and minimax-BRG on specific Petri net benchmarks, one can call the function ``Test.m``
 
-* To verify the nonblockingness of specific Petri net systems, one can call the function Nonblockingness.m
+* To verify the nonblockingness of specific Petri net systems, one can call the function ``Nonblockingness.m``
 
 ## Input of the program:
 
