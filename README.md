@@ -48,7 +48,7 @@ M0 = [2; 0; 1];
 %Explicit transition set Te = {t2}
 Te1 = [2];
 
-%To test the efficiency of RG, expanded BRG, and minimax-BRG based on the same Petri net benchmark
+%To test the efficiency of RG, expanded BRG, and minimax-BRG
 [TestEfficiency] = TestEfficiency(Pre,Post,M0,Te1);
 ```
 
@@ -56,7 +56,7 @@ Te1 = [2];
 
 * the Petri net system (N, M0, MF) by its Pre matrix, Post matrix, the initial marking M0
 
-* the set of final markings MF characterizd by the GMEC parameters w and k
+* the set of final markings MF characterizd by the generalized mutual exclusion constraint (GMEC) parameters w and k
 
 * the set of explicit transitions Te1
 
