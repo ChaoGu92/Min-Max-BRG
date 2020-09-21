@@ -18,7 +18,7 @@ We implement the key idea of the paper in MinimaxBRG.m (for computing the minima
 
 * the net system <N, M0> by its Pre matrix, Post matrix, and the initial marking M0
 
-* two sets of explicit transitions Te1 (for testing expanded BRG and minimax-BRG) and Te2 (for testing RG)
+* the set of considered explicit transitions Te1
 
 ## Output of the program 1:
 
@@ -37,29 +37,26 @@ Pre = [   %t1,t2,t3%
 ];
 
 %Post matrix
-Post = [0 1 0;
-        1 0 0;
-        0 0 0;
+Post = [0, 1, 0;
+        1, 0, 0;
+        0, 0, 0;
 ];
 
 %initial marking (one can change the token numbers in p1 and p3)
-M0 = [2;0;1];
+M0 = [2; 0; 1];
 
 %Explicit transition set Te = {t2}
 Te1 = [2];
 
-%GMEC parameters w and k (characterizing the set of final markings MF)
-w = [-1;0;0];
-k = -2;
-
-tic;
-[MMBRG] = MinimaxBRG(Pre,Post,M0,Te1);
-toc;
+%To test the efficiency of RG, expanded BRG, and minimax-BRG based on the same Petri net benchmark
+[TestEfficiency] = TestEfficiency(Pre,Post,M0,Te1);
 ```
 
 ## Input of the program 2:
 
-* the Petri net system (N, M0, MF) by its Pre matrix, Post matrix, the initial marking M0, and the GMEC parameters w and k (characterizing the set of final markings MF)
+* the Petri net system (N, M0, MF) by its Pre matrix, Post matrix, the initial marking M0
+
+* the set of final markings MF characterizd by the GMEC parameters w and k
 
 * the set of explicit transitions Te1
 
@@ -69,7 +66,7 @@ toc;
 
 * the time required w.r.t nonblockingness verification by using the minimax-BRG
 
-### The following is an example to run the program by testing the Minimax-BRG of the net system in Fig. 1 (left) of the paper with \alpha = 1, w = [-1;0;0] and k = -2.
+### The following is an example to run the program by testing the Minimax-BRG of the net system in Fig. 1 (left) of the paper with \alpha = 1, w = [-1; 0; 0] and k = -2.
 
 ```MATLAB
 %Pre matrix
@@ -80,23 +77,23 @@ Pre = [   %t1,t2,t3%
 ];
 
 %Post matrix
-Post = [0 1 0;
-        1 0 0;
-        0 0 0;
+Post = [0, 1, 0;
+        1, 0, 0;
+        0, 0, 0;
 ];
 
 %initial marking (one can change the token numbers in p1 and p3)
-M0 = [2;0;1];
+M0 = [2; 0; 1];
 
 %Explicit transition set Te = {t2}
 Te1 = [2];
 
 %GMEC parameters w and k (characterizing the set of final markings MF)
-w = [-1;0;0];
+w = [-1; 0; 0];
 k = -2;
 
 %To verify the nonblockingness of the Petri net system
-[Nonblockingness] = Nonblockingness(Pre,Post,M0,Te1,w,k);
+[Nonblockingness] = Nonblockingness(Pre, Post, M0, Te1, w, k);
 ```
 
 
