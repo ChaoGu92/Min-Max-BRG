@@ -45,11 +45,24 @@ We implement the key idea of the paper in MinimaxBRG.m (for computing the minima
 
 
 ```MATLAB
-Pre=[1 0 0;0 1 2;0 0 1];
-Post=[0 1 0;1 0 0;0 0 0];
-M0=[2 0 1]';
-Te1=[2];
-w = [-1 0 0]';
-k= -2;
+//Pre matrix
+Pre = [1 0 0;
+       0 1 2;
+       0 0 1];
+
+//Pre matrix
+Post = [0 1 0;
+        1 0 0;
+        0 0 0];
+
+//initial marking (one can change the token numbers in p1 and p3)
+M0 = [2;0;1];
+
+//Explicit transition set Te = {t2}
+Te1 = [2];
+
+//GMEC parameters w and k (characterizing the set of final markings MF)
+w = [-1;0;0];
+k = -2;
 ```
 
