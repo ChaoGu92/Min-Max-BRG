@@ -31,15 +31,25 @@ We implement the key idea of the paper in MinimaxBRG.m (for computing the minima
 
 ## Output of the program:
 
-### 1. 
+### 1. for computational efficiency comparison among RG, expanded BRG, and minimax-BRG:
 
 * RG, expanded BRG, minimax-BRG and their node numbers
 
 * the times required to generate RG, expanded BRG, and minimax-BRG
 
-### 2. 
+### 2. for nonblockingness verification by using minimax-BRG:
 
 * the nonblockingness of the Petri net system (N, M0, MF)
 
 * the time required w.r.t nonblockingness verification by using the minimax-BRG
+
+
+```MATLAB
+Pre=[1 0 0;0 1 2;0 0 1];
+Post=[0 1 0;1 0 0;0 0 0];
+M0=[2 0 1]';
+Te1=[2];
+w = [-1 0 0]';
+k= -2;
+```
 
