@@ -41,3 +41,41 @@ To test the efficiency of the minimax-BRG on specific Petri net benchmarks, one 
 
 ● the time required w.r.t nonblockingness verification by using the minimax-BRG
 
+
+public static void main(String[] args) {
+   	//Pre matrix
+   	int[][] Pre = {
+   			     /*t1,t2,t3,t4,t5,t6,t7,t8,t9*/
+   			/*p1*/{1, 0, 0, 0, 0, 0, 0, 0, 0},
+   			/*p2*/{0, 1, 0, 0, 0, 0, 0, 0, 0},
+   			/*p3*/{0, 0, 1, 0, 0, 0, 0, 0, 0},
+   			/*p4*/{0, 0, 0, 2, 0, 0, 0, 1, 0},
+   			/*p5*/{0, 0, 0, 0, 1, 0, 0, 0, 0},
+   			/*p6*/{0, 0, 0, 0, 0, 2, 0, 0, 0},
+   			/*p7*/{0, 0, 0, 0, 0, 0, 2, 0, 0},
+   			/*p8*/{0, 0, 0, 0, 0, 0, 0, 0, 1},
+   	};
+   	//Post matrix
+   	int[][] Post = {
+   			{0,0,0,0,0,0,0,0,1},
+   			{1,0,0,0,0,0,1,0,0},
+   			{0,1,0,0,0,0,0,0,0},
+   			{0,0,1,0,0,0,1,0,0},
+   			{0,0,0,2,0,0,0,0,0},
+   			{0,0,0,0,1,0,0,0,0},
+   			{0,0,0,0,0,2,0,0,0},
+   			{0,0,0,0,0,0,0,1,0},
+   	};
+   	//initial marking (one can change the token numbers in p1 and p7)
+   	int[] M0 = {1,//p1
+   	            0,0,0,0,0,
+   	            2,//p7
+   	            0};
+   	// observable transition set To={t2,t4,t6,t7,t9}
+   	List<String> To = Arrays.asList("t2","t4","t6","t7","t9");
+   	// primary observable transition Tpri = {t4,t6,t9}
+   	List<String> Tpri = Arrays.asList("t4","t6","t9");
+   	
+   	//To test the efficiency of HBRG
+   	testHBRG(Pre, Post, M0, To, Tpri) ;
+   }
