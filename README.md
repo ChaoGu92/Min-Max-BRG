@@ -26,7 +26,7 @@ We implement the key idea of the paper in MinimaxBRG.m (for computing the minima
 
 * the times required to generate RG, expanded BRG, and minimax-BRG
 
-### The following is an example to run the program by testing the Minimax-BRG of the net system in Fig. 1 (left) of the paper with $\alpha$ = 2.
+### The following is an example to run the program by testing the Minimax-BRG of the net system in Fig. 1 (left) of the paper with `\alpha` = 2.
 
 ```MATLAB
 %Pre matrix
