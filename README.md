@@ -33,7 +33,7 @@ We implement the key idea of the paper in MinimaxBRG.m (for computing the minima
          
 Pre = [  %t1,t2,t3%
            1, 0, 0; %p1
-           0, 1, 2; %p2
+           0, 1, 1; %p2
            0, 0, 1; %p3
 ];
 
@@ -73,7 +73,7 @@ Te1 = [2];
 %Pre matrix
 Pre = [  %t1,t2,t3%
            1, 0, 0; %p1
-           0, 1, 2; %p2
+           0, 1, 1; %p2
            0, 0, 1; %p3
 ];
 
