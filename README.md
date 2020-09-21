@@ -1,18 +1,18 @@
 # Minimax-BRG
 
-This is a repository for the paper named "Verification of Nonblockingness in Bounded Petri Nets: A Novel Semi-Structural Approach".
+This is a repository for the paper named **"Verification of Nonblockingness in Bounded Petri Nets: A Novel Semi-Structural Approach"**.
 
 Please see the PDF file named "Test_MinimaxBRG.pdf" for three additional benchmarks corresponding to the paper.
 
 # Please see MinimaxBRG_Code directory for the codes of the paper.
 
-This program requires Matlab R2017a or higher version.
+The programs require Matlab R2017a or higher version.
 
 We implement the key idea of the paper in MinimaxBRG.m (for computing the minimax-BRGs), MinimaxMbasis.m (for comptuting the minimax basis markings), and minimaxy.m (for computing the minimal and maximal explanations).
 
-* To test and compare the computational efficiency among RG, expanded BRG, and minimax-BRG on specific Petri net benchmarks, one can call the function ``Test.m`` in program 1
+* To test and compare the computational efficiency among RG, expanded BRG, and minimax-BRG on specific Petri net benchmarks, one can call the function ``Test.m`` in **program 1**
 
-* To verify the nonblockingness of specific Petri net systems, one can call the function ``Nonblockingness.m`` in program 2
+* To verify the nonblockingness of specific Petri net systems, one can call the function ``Nonblockingness.m`` in **program 2**
 
 ## Input of the program 1:
 
@@ -26,7 +26,7 @@ We implement the key idea of the paper in MinimaxBRG.m (for computing the minima
 
 * the times required to generate RG, expanded BRG, and minimax-BRG
 
-### The following is an example to run the program by testing the Minimax-BRG of the net system in Fig. 1 (left) of the paper with \alpha = 2.
+### The following is an example to run the program by testing the Minimax-BRG of the net system in Fig. 1 (left) of the paper with $\alpha$ = 2.
 
 ```MATLAB
 %Pre matrix
