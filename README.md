@@ -10,39 +10,23 @@ This program requires Matlab R2017a or higher version.
 
 We implement the key idea of the paper in MinimaxBRG.m (for computing the minimax-BRGs), MinimaxMbasis.m (for comptuting the minimax basis markings), and minimaxy.m (for computing the minimal and maximal explanations).
 
-* To test and compare the computational efficiency among RG, expanded BRG, and minimax-BRG on specific Petri net benchmarks, one can call the function ``Test.m``
+* To test and compare the computational efficiency among RG, expanded BRG, and minimax-BRG on specific Petri net benchmarks, one can call the function ``Test.m`` in program 1
 
-* To verify the nonblockingness of specific Petri net systems, one can call the function ``Nonblockingness.m``
+* To verify the nonblockingness of specific Petri net systems, one can call the function ``Nonblockingness.m`` in program 2
 
-## Input of the program:
-
-### 1. for computational efficiency comparison among RG, expanded BRG, and minimax-BRG:
+## Input of the program 1:
 
 * the net system <N, M0> by its Pre matrix, Post matrix, and the initial marking M0
 
 * two sets of explicit transitions Te1 (for testing expanded BRG and minimax-BRG) and Te2 (for testing RG)
 
-
-### 2. for nonblockingness verification by using minimax-BRG:
-
-* the Petri net system (N, M0, MF) by its Pre matrix, Post matrix, the initial marking M0, and the GMEC parameters w and k (characterizing the set of final markings MF)
-
-* the set of explicit transitions Te1
-
-## Output of the program:
-
-### 1. for computational efficiency comparison among RG, expanded BRG, and minimax-BRG:
+## Output of the program 1:
 
 * RG, expanded BRG, minimax-BRG and their node numbers
 
 * the times required to generate RG, expanded BRG, and minimax-BRG
 
-### 2. for nonblockingness verification by using minimax-BRG:
-
-* the nonblockingness of the Petri net system (N, M0, MF)
-
-* the time required w.r.t nonblockingness verification by using the minimax-BRG
-
+### The following is an example to run the program by testing the Minimax-BRG of the net system in Fig. 1 (left) of the paper with \alpha = 2.
 
 ```MATLAB
 %Pre matrix
@@ -72,4 +56,19 @@ tic;
 [MMBRG] = MinimaxBRG(Pre,Post,M0,Te1);
 toc;
 ```
+
+## Input of the program 2:
+
+* the Petri net system (N, M0, MF) by its Pre matrix, Post matrix, the initial marking M0, and the GMEC parameters w and k (characterizing the set of final markings MF)
+
+* the set of explicit transitions Te1
+
+## Output of the program 2:
+
+* the nonblockingness of the Petri net system (N, M0, MF)
+
+* the time required w.r.t nonblockingness verification by using the minimax-BRG
+
+### The following is an example to run the program by testing the Minimax-BRG of the net system in Fig. 1 (left) of the paper with \alpha = 2, w and k.
+
 
