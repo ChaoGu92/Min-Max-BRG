@@ -50,7 +50,7 @@ M0 = [2; 0; 1];
 Te1 = [2];
 
 %To test the efficiency of RG, expanded BRG, and minimax-BRG
-[TestEfficiency] = TestEfficiency(Pre,Post,M0,Te1);
+[TestEfficiency] = TestEfficiency(Pre, Post, M0, Te1);
 ```
 
 ## Input of the program 2:
