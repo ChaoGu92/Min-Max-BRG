@@ -23,7 +23,7 @@ To test the efficiency of the minimax-BRG on specific Petri net benchmarks, one 
 
 # 2. for nonblockingness verification by using minimax-BRG:
 
-● the Petri net system (N, M0, MF) by its Pre matrix, Post matrix, the initial marking M0, the GMEC parameters w and k (characterizing the set of final markings MF)
+● the Petri net system (N, M0, MF) by its Pre matrix, Post matrix, the initial marking M0, and the GMEC parameters w and k (characterizing the set of final markings MF)
 
 ● the set of explicit transitions Te1
 
@@ -31,13 +31,13 @@ To test the efficiency of the minimax-BRG on specific Petri net benchmarks, one 
 
 # 1. 
 
-● RG, expanded BRG, minimax-BRG and their nodes number
+● RG, expanded BRG, minimax-BRG and their node numbers
 
-● the time required to generate RG, expanded BRG, minimax-BRG
+● the times required to generate RG, expanded BRG, and minimax-BRG
 
 # 2. 
 
 ● the nonblockingness of the Petri net system (N, M0, MF)
 
-● the time required to verifiy the nonblockingness by using the minimax-BRG
+● the time required w.r.t nonblockingness verification by using the minimax-BRG
 
