@@ -64,8 +64,12 @@ M0 = [2;0;1];
 %Explicit transition set Te = {t2}
 Te1 = [2];
 
-%GMEC parameters `w` and k (characterizing the set of final markings MF)
-``w`` = [-1;0;0];
+%GMEC parameters w and k (characterizing the set of final markings MF)
+w = [-1;0;0];
 k = -2;
+
+tic;
+[MMBRG] = MinimaxBRG(Pre,Post,M0,Te1);
+toc;
 ```
 
