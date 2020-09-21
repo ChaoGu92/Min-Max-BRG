@@ -18,7 +18,7 @@ We implement the key idea of the paper in MinimaxBRG.m (for computing the minima
 
 * the net system <N, M0> by its Pre matrix, Post matrix, and the initial marking M0
 
-* the set of considered explicit transitions Te1
+* the set of explicit transitions Te1
 
 ## Output of the program 1:
 
