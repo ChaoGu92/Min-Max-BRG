@@ -26,7 +26,7 @@ We implement the key idea of the paper in MinimaxBRG.m (for computing the minima
 
 * the times required to generate RG, expanded BRG, and minimax-BRG
 
-#### The following is an example to run the program by testing the Minimax-BRG of the net system in Fig. 1 (left) of the paper with \alpha = 1.
+#### The following is an example to run the program 1 by computing RG, expanded BRG, and minimax-BRG of the system in Fig. 1 (left) of the paper with \alpha = 1.
 
 ```MATLAB
 %Pre matrix
@@ -67,31 +67,69 @@ Te1 = [2];
 
 * the time required w.r.t nonblockingness verification by using the minimax-BRG
 
-#### The following is an example to run the program by testing the Minimax-BRG of the net system in Fig. 1 (left) of the paper with \alpha = 1, w = [-1; 0; 0] and k = -2.
+#### The following is an example to run the program 2 by testing the nonblockingness of the system in Fig. 4 of the paper with \lambda = 6, \mu = 1, w = [0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 1; 1; 1; 1; 1; 0; 0; 0; 0; 0; 0] and k = 3. 
 
 ```MATLAB
 %Pre matrix
-Pre = [  %t1,t2,t3%
-           1, 0, 0; %p1
-           0, 1, 1; %p2
-           0, 0, 1; %p3
-];
-
+Pre = [  %t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,t15,t16%
+           1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0; %p1
+           0, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0; %p2
+           0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0; %p3
+           0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0; %p4
+           0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0; %p5
+           0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0; %p6
+           0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0; %p7
+           0, 1, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0; %p8
+           0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0; %p9
+           0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0; %p10
+           0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0; %p11
+           0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0; %p12
+           0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0; %p13
+           0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0; %p14
+           0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0; %p15
+           0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1; %p16
+           0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0; %p17
+           0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 5, 0; %p18
+           0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0; %p19
+           0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0; %p20
+           0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0; %p21
+           0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0; %p22
+]; 
+        
 %Post matrix
-Post = [0, 1, 0;
-        1, 0, 0;
-        0, 0, 0;
-];
+Post = [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0;
+        2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0; 
+        0, 1, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0; 
+        0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0; 
+        0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0; 
+        0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0; 
+        0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0; 
+        0, 0, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0; 
+        0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0; 
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3; 
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0; 
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0; 
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0; 
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0; 
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0; 
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0; 
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0; 
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 1, 0, 0; 
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0; 
+        0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0; 
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0; 
+        0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0;
+]; 
 
-%initial marking (one can change the token numbers in p1 and p3)
-M0 = [2; 0; 1];
+%initial marking (one can change the token numbers in p1 and p22)
+M0 = [6; 0; 0; 0; 0; 0; 0; 1; 1; 6; 0; 0; 0; 0; 0; 0; 1; 6; 1; 1; 1; 1];
 
-%Explicit transition set Te = {t2}
-Te1 = [2];
+%Explicit transition set Te = {t3, t6, t11, t13}
+Te1 = [3 6 11 13];
 
 %GMEC parameters w and k (characterizing the set of final markings MF)
-w = [-1; 0; 0];
-k = -2;
+w = [0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 1; 1; 1; 1; 1; 0; 0; 0; 0; 0; 0];
+k = 3;
 
 %To verify the nonblockingness of the Petri net system
 [Nonblockingness] = Nonblockingness(Pre, Post, M0, Te1, w, k);
