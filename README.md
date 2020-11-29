@@ -10,7 +10,7 @@ The programs require Matlab R2017a or higher version.
 
 We implement the key idea of the paper in MinimaxBRG.m (for computing the minimax-BRGs), MinimaxMbasis.m (for comptuting the minimax basis markings), and minimaxy.m (for computing the minimal and maximal explanations).
 
-* To test and compare the computational efficiency among RG, expanded BRG, and minimax-BRG on specific Petri net benchmarks, one can call the function ``TestEfficiency.m`` in **program 1**
+* To test and compare the computational efficiency between RG and minimax-BRG on specific Petri net benchmarks, one can call the function ``TestEfficiency.m`` in **program 1**
 
 * To verify the nonblockingness of specific Petri net systems, one can call the function ``Nonblockingness.m`` in **program 2**
 
@@ -18,15 +18,15 @@ We implement the key idea of the paper in MinimaxBRG.m (for computing the minima
 
 * the net system <N, M0> by its Pre matrix, Post matrix, and the initial marking M0
 
-* the set of explicit transitions Te1
+* the set of explicit transitions Te
 
 ## Output of the program 1:
 
-* RG, expanded BRG, minimax-BRG and their node numbers
+* RG, minimax-BRG and their node numbers
 
-* the times required to generate RG, expanded BRG, and minimax-BRG
+* the times required to generate RG and minimax-BRG
 
-#### The following is an example to run the program 1 by computing RG, expanded BRG, and minimax-BRG of the system in Fig. 1 (left) of the paper with \alpha = 1.
+#### The following is an example to run the program 1 by computing RG and minimax-BRG of the system in Fig. 1 (left) of the paper with \alpha = 1.
 
 ```MATLAB
 %Pre matrix
@@ -43,13 +43,13 @@ Post = [0, 1, 0;
         0, 0, 0;
 ];
 
-%initial marking (one can change the token numbers in p1 and p3)
+%initial marking (one can change the token numbers)
 M0 = [2; 0; 1];
 
 %Explicit transition set Te = {t2}
 Te1 = [2];
 
-%To test the efficiency of RG, expanded BRG, and minimax-BRG
+%To test the efficiency of RG and minimax-BRG
 [TestEfficiency] = TestEfficiency(Pre, Post, M0, Te1);
 ```
 
@@ -59,7 +59,7 @@ Te1 = [2];
 
 * the set of final markings MF characterizd by the generalized mutual exclusion constraint (GMEC) parameters w and k
 
-* the set of explicit transitions Te1
+* the set of explicit transitions Te
 
 ## Output of the program 2:
 
@@ -121,7 +121,7 @@ Post = [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0;
         0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0;
 ]; 
 
-%initial marking (one can change the token numbers in p1 and p22)
+%initial marking (one can change the token numbers)
 M0 = [6; 0; 0; 0; 0; 0; 0; 1; 1; 6; 0; 0; 0; 0; 0; 0; 1; 6; 1; 1; 1; 1];
 
 %Explicit transition set Te = {t3, t6, t11, t13}
