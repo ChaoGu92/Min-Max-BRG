@@ -12,7 +12,7 @@ We implement the key idea of the paper in MinimaxBRG.m (for computing the minima
 
 * To test and compare the computational efficiency between RG and minimax-BRG on specific Petri net benchmarks, one can call the function ``TestEfficiency.m`` in **program 1**
 
-* To verify the nonblockingness of specific Petri net systems, one can call the function ``Nonblockingness.m`` in **program 2**
+* To verify the nonblockingness of specific Petri net systems, one can call the function ``Nonblockingness.m`` in **program 2**. Note that to successfully execute this function, one should first install a toolbox for modelling and optimization in MATLAB namely YALMIP and a mixed-integer linear programming solver namely lpsolve
 
 ## Input of the program 1:
 
