@@ -2,7 +2,7 @@
 
 This is a repository for the paper named **"Verification of Nonblockingness in Bounded Petri Nets With Min-Max Basis Reachability Graphs"**.
 
-Please see the PDF file named "Test_MinimaxBRG.pdf" for three additional benchmarks corresponding to the paper.
+Please see the PDF file named "Test Min-Max-BRG.pdf" for three additional benchmarks corresponding to the paper.
 
 # Please see MinimaxBRG_Code directory for the codes of the paper.
 
