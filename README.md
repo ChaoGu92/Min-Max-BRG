@@ -8,9 +8,9 @@ Please see the PDF file named "Test Min-Max-BRG.pdf" for three additional benchm
 
 The programs require Matlab R2017a or higher version.
 
-We implement the key idea of the paper in MinimaxBRG.m (for computing the minimax-BRGs), MinimaxMbasis.m (for comptuting the minimax basis markings), and minimaxy.m (for computing the minimal and maximal explanations).
+We implement the key idea of the paper in MinimaxBRG.m (for computing the min-max-BRGs), MinimaxMbasis.m (for comptuting the min-max basis markings), and minimaxy.m (for computing the minimal and maximal explanations).
 
-* To test and compare the computational efficiency between RG and minimax-BRG on specific Petri net benchmarks, one can call the function ``TestEfficiency.m`` in **program 1**
+* To test and compare the computational efficiency between RG and min-max-BRG on specific Petri net benchmarks, one can call the function ``TestEfficiency.m`` in **program 1**
 
 * To verify the nonblockingness of specific Petri net systems, one can call the function ``Nonblockingness.m`` in **program 2**. Note that to successfully execute this function, one should first install a toolbox for modelling and optimization in MATLAB namely YALMIP (https://yalmip.github.io/download/) and a mixed-integer linear programming solver namely lpsolve (https://sourceforge.net/projects/lpsolve/files/lpsolve/5.5.2.0/)
 
@@ -22,11 +22,11 @@ We implement the key idea of the paper in MinimaxBRG.m (for computing the minima
 
 ## Output of the program 1:
 
-* RG, minimax-BRG and their node numbers
+* RG, min-max-BRG and their node numbers
 
-* the times required to generate RG and minimax-BRG
+* the times required to generate RG and min-max-BRG
 
-#### The following is an example to run the program 1 by computing RG and minimax-BRG of the system in Fig. 1 (left) of the paper with \alpha = 1.
+#### The following is an example to run the program 1 by computing RG and min-max-BRG of the system in Fig. 1 (left) of the paper with \alpha = 1.
 
 ```MATLAB
 %Pre matrix
@@ -49,7 +49,7 @@ M0 = [2; 0; 1];
 %Explicit transition set Te = {t2}
 Te1 = [2];
 
-%To test the efficiency of RG and minimax-BRG
+%To test the efficiency of RG and min-max-BRG
 [TestEfficiency] = TestEfficiency(Pre, Post, M0, Te1);
 ```
 
